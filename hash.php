@@ -40,7 +40,7 @@ class Hash
      * @return string 
      */
     
-    public static function check_password($hash,$password) {  
+    public static function check_hash($hash,$password) {  
          
          return ($hash == self::create_hash($password));  
     }  
