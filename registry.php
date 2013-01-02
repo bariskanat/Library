@@ -65,6 +65,25 @@ class Registry{
     {
         return self::instance()->get($key);
     }  
+
+	/**
+	* @return all objects
+	*/
+	
+	public static function allobject()
+    {
+		return array_keys(self::instance()->objects);
+	
+	}
+	
+	/**
+	* clears the objects array
+	*/
+	
+	public static function emptyobjects()
+	{
+		self::instance()->objects = array();
+	}
     
     /**
      *
