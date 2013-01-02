@@ -93,7 +93,7 @@ class Registry{
      * @param string $class
      * @param string $path
      * @param string $ext
-     * @return boolean 
+     * @return mix
      */
     
     public static function requireClass($class,$path="lib",$ext=".php")
@@ -101,7 +101,7 @@ class Registry{
         if(file_exists($path.$class.$ext))
         {
             require_once $path.$class.$ext;
-            return true;
+            return new ucfirst($class);
             
         }
         
