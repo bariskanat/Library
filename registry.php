@@ -61,18 +61,18 @@ class Registry{
      * @param string $key
      * @return mix 
      */
-    public static function getobject($key)
+    public static function &getobject($key)
     {
         return self::instance()->get($key);
     }  
 
 	/**
-	* @return all objects
+	* @return  objects array
 	*/
 	
 	public static function allobject()
     {
-		return array_keys(self::instance()->objects);
+		return self::instance()->objects;
 	
 	}
 	
