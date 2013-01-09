@@ -30,7 +30,7 @@ Db::open("authors")->group_by("name")->get();
 Db::open("authors")->group_by("name")->order_by("id")->get();
 Db::open("authors")->select("id,name,lastname")->where("name","=","baris")->order_by("name","desc")->limit(5)->get();
 Db::open("authors")->select("id,name,lastname")->where("name","=","baris")->where_in("id",[1,2,3,4,5])->get();
-Db::open("baris")->select("id,name,lastname")->where("name","=","baris")->or_where_notin("id",[1,2,3,4,5])->get();
+Db::open("authors")->select("id,name,lastname")->where("name","=","baris")->or_where_notin("id",[1,2,3,4,5])->get();
 Db::open("authors")->get();
  
 //--------------INSERT--------------------
@@ -41,8 +41,8 @@ Db::open("authors")->insert(["firstname"=>"baris","lastname"=>"kanat","username"
 //----------DELETE--------------
 Db::open("authors")->delete(5);
 Db::open("authors")->delete("name","=","baris");
-Db::open("baris")->where("id","<",5)->delete();
-Db::open("baris")->where("name","=","baris")->or_where("name","=","ali")->delete();
+Db::open("authors")->where("id","<",5)->delete();
+Db::open("authors")->where("name","=","baris")->or_where("name","=","ali")->delete();
 
 
 //--------------UPDATE------------------------------
