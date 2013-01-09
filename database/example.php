@@ -15,7 +15,8 @@ Db::query("select * from authors where id = ? ",array(3));
 Db::query("select * from authors where id = ? ",array(5),true);
 
 //------first method with json result
-Db::first("select * from authors");
+Db::first("select * from authors",true);
+Db::first("select * from authors where id < ?",array(10),true);
 
 //------------first method without json result
 Db::first("select * from authors");
