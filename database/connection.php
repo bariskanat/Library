@@ -4,9 +4,9 @@ class Connection{
     
     private  static $config=[
         "host"=>"localhost",
-        "database"=>"learninglaravel",
-        "username"=>"root",
-        "password"=>"bkanat79"
+        "database"=>"database",
+        "username"=>"yourusername",
+        "password"=>"yourpassword"
     ];
     
     private static $pdo;
