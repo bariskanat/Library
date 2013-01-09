@@ -298,9 +298,6 @@ class Db{
      */
     public  function insert($data)
     {
-    
-        var_dump($this->bindings);
-        var_dump($data);
        $this->bindings=  array_merge($this->bindings,array_values($data));
        
        $this->sql=  (new Insert_builder($this,$data))->result();
