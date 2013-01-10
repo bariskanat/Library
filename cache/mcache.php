@@ -1,7 +1,7 @@
 <?php
  if (!in_array('memcache', get_loaded_extensions()))
  {
-        die('Memcache extension needs to be installed.');
+        die('Memcached extension needs to be installed.');
  }
 
 
@@ -9,7 +9,7 @@ class Mcache{
     
    
     private static $memcache;
-    private $servers=[["127.0.0.1",11211]];
+    private static $servers=[["127.0.0.1",11211]];
  
     
     public function __construct()
@@ -27,7 +27,7 @@ class Mcache{
     
     public function connect()
     {
-        foreach($this->servers as $server)
+        foreach(self::$servers as $server)
         {
             self::$memcache->addserver($server[0],$server[1]);
         }
@@ -43,7 +43,7 @@ class Mcache{
     
     public static function setserver($server)
     {
-        $this->server=array_merge($this->server,$server);
+        self::$servers=array_merge(self::$servers,$server);
     }
     
     public function delete($key)
