@@ -29,7 +29,7 @@ class Mcache{
     {
         foreach(self::$servers as $server)
         {
-            self::$memcache->addserver($server[0],$server[1]);
+            self::$memcache->addServer($server[0],$server[1]);
         }
        
     }
