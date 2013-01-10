@@ -1,7 +1,7 @@
 <?php
  if (!in_array('memcache', get_loaded_extensions()))
  {
-        die('Memcached extension needs to be installed.');
+        die('Memcache extension needs to be installed.');
  }
 
 
