@@ -19,10 +19,14 @@ class Request{
     public static function response($route)
     {
       
-        if(!in_array($route['args']['request'],self::$compennets))
-            Response::error();   
-		else
-         Response::result($route);
+        if(!in_array($route['args']['request'],self::$compennets)){
+			Response::error();
+		}else{
+			Response::result($route);
+		}
+               
+		
+         
         
         
     }
