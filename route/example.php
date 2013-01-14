@@ -11,14 +11,10 @@ require_once 'class/func.php';
 
 
 //--------GET------------------------//
-Route::get("task","author.index");
-Route::get("task/(any)","author.index");
+
 
 get("task","author.index");
 
-Route::get("task/(any)",function($name){
-    echo "helloo {$name}";
-});
 
 get("task/(any)",function($name){
     echo "helloo {$name}";
@@ -26,36 +22,35 @@ get("task/(any)",function($name){
 
 //-----------POST-------------------
 
-Route::post("task","author.create");
-Route::post("task/(any)","author.create");
+
 post("task","author.create");
+post("task/(any)","author.create");
 
 //---------CONTROLLER----------------------------
 
-Route::controller("author");
+
 controller("author");
-Route::controller("task","author");
+
 controller("task","author");
 
 //-----------------PUT--------------------
 
-Route::put("task/(any)","author.update");
+
 
 put("task/(any)","author.update");
 
 //------------DELETE-------------------
 
-Route::delete("task/(any)","author.destroy");
+
 
 delete("task/(any)","author.destroy");
 
 //-----------------------REST---------------------------
 
-Route::rest("task", "author");
+
 rest("task", "author");
 
 
-Route::call();
 
 call();
 
