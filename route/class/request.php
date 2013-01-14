@@ -20,7 +20,8 @@ class Request{
     {
       
         if(!in_array($route['args']['request'],self::$compennets))
-            Response::error();        
+            Response::error();   
+		else
          Response::result($route);
         
         
